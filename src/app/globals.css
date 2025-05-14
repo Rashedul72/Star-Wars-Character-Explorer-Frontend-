@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+@tailwind utilities;
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -23,4 +24,56 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.search-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  width: 70%;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.character-card {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f19c9c;
+  text-align: left;
+  
+}
+
+.error {
+  color: red;
+  margin-top: 1rem;
+}
+
+
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+.animate-flicker {
+  animation: flicker 1s infinite alternate ease-in-out;
 }
